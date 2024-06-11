@@ -76,7 +76,12 @@ const ProfilePost = ({ post }) => {
                 <Carousel>
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                     style={{
+                      height: {
+                        base: "50vh", 
+                        md: "90vh"     
+                      }
+                    }}
                       className="d-block w-100"
                       src={post.imageURL[0]}
                       alt="First slide"
@@ -85,7 +90,12 @@ const ProfilePost = ({ post }) => {
                   </Carousel.Item>
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                   style={{
+                    height: {
+                      base: "50vh", 
+                      md: "90vh"     
+                    }
+                  }}
                       className="d-block w-100"
                       src={post.imageURL[1]}
                       alt="Second slide"
@@ -95,7 +105,12 @@ const ProfilePost = ({ post }) => {
                   </Carousel.Item>
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                       style={{
+                        height: {
+                          base: "50vh", 
+                          md: "90vh"     
+                        }
+                      }}
                       className="d-block w-100"
                       src={post.imageURL[2]}
                       alt="Third slide"
@@ -106,7 +121,12 @@ const ProfilePost = ({ post }) => {
 
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                     style={{
+                      height: {
+                        base: "50vh", 
+                        md: "90vh"     
+                      }
+                    }}
                       className="d-block w-100"
                       src={post.imageURL[3]}
                       alt="Fourth slide"
@@ -166,113 +186,6 @@ const ProfilePost = ({ post }) => {
                   {post.caption && <PostCaption post={post} />}
                 </VStack>
               </Flex>
-
-            {/* <Flex
-              gap="4"
-              w={{ base: "90%", sm: "70%", md: "full" }}
-              mx={"auto"}
-              maxH={"90vh"}
-              minH={"50vh"}
-            >
-       
-              <Flex
-                borderRadius={4}
-                overflow={"hidden"}
-                border={"1px solid"}
-                borderColor={"whiteAlpha.300"}
-                flex={1.5}
-                justifyContent={"center"}
-                alignItems={"center"}
-              >
-           
-                <div>
-                  <Carousel>
-                    <Carousel.Item>
-                      <img
-                        style={{ height: "90vh" }}
-                        className="d-block w-100"
-                        src={post.imageURL}
-                        alt="First slide"
-                      />
-                      <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>
-                          Nulla vitae elit libero, a pharetra augue mollis
-                          interdum.
-                        </p>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        style={{ height: "90vh" }}
-                        className="d-block w-100"
-                        src={post.imageURL}
-                        alt="Second slide"
-                      />
-
-                      <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </p>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        style={{ height: "90vh" }}
-                        className="d-block w-100"
-                        src={post.imageURL}
-                        alt="Third slide"
-                      />
-
-                      <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                          Praesent commodo cursus magna, vel scelerisque nisl
-                          consectetur.
-                        </p>
-                      </Carousel.Caption>
-                    </Carousel.Item>
-                  </Carousel>
-                </div>
-
-                <div>
-                  
-                </div>
-              </Flex>
-        
-                 <Flex
-                flex={1}
-                flexDir={"column"}
-                px={10}
-                display={{ base: "none", md: "flex" }}
-              >
-                <Flex alignItems={"center"} justifyContent={"space-between"}>
-                  <Flex alignItems={"center"} gap={4}>
-                    <Avatar
-                      src={avatarImage}
-                      size={"sm"}
-                      name="As a Programmer"
-                    />
-                    <Text fontWeight={"bold"} fontSize={12}>
-                      Đoàn Minh Huyền
-                    </Text>
-                  </Flex>
-                </Flex>
-                <Divider my={4} bg={"gray.500"} />
-                {console.log(post.caption)}
-                <VStack
-                  w="full"
-                  alignItems={"start"}
-                  maxH={"350px"}
-                  overflowY={"auto"}
-                >
-                  {post.caption && <PostCaption post={post} />}
-                </VStack>
-                <Divider my={4} bg={"gray.8000"} />
-              </Flex>
-            </Flex> */}
           </ModalBody>
         </ModalContent>
       </Modal>

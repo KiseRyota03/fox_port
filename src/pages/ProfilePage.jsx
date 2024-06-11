@@ -1,7 +1,6 @@
 	
 import { Link as RouterLink } from "react-router-dom";
 import { Container, Flex, Link, Skeleton, SkeletonCircle, Text, VStack } from "@chakra-ui/react";
-
 import ProfileTabs from "../components/profile/ProfileTabs";
 import ProfilePosts from "../components/profile/ProfilePosts";
 import ProfileHeader from "../components/profile/ProfileHeader";
@@ -24,6 +23,7 @@ const ProfilePage = () => {
 				borderColor={"#72ac77"}
 				direction={"column"}
 			>
+	
 				<ProfileTabs />
 			</Flex>
 		</Container>
