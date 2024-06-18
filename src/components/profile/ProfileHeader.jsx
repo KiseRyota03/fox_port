@@ -105,7 +105,7 @@ const ProfileHeader = () => {
           src={avatarImage}
           onClick={onOpen}
         />
-        <Text marginTop={"5px"}>About me</Text>
+        <Text marginTop={"5px"}>Resume</Text>
       </div>
 
       <Modal
