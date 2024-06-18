@@ -13,6 +13,7 @@ const styles = {
 			bg: mode("gray.100", "#EFFFEE")(props),
 			color: mode("gray.800", "#1f2424")(props),
 			fontFamily: "'Alata', sans-serif",
+			textColor: mode("#4C704E", "#4C704E")(props), // Add this line for text color
 
 			
 		},

@@ -31,17 +31,19 @@ const ProfilePosts = () => {
 		  likes: 18
 		},
 		{
-		  id: 2,
-		  imageURL: [imagePost1_imageSlide1, imagePost1_imageSlide2, imagePost1_imageSlide3, imagePost1_imageSlide4],
-		  comments: ["Great photo!", "Love it!"],
-		  likes: 25
-		},
-		{
-			id: 3,
+			id: 2,
 		  imageURL: imagePost2,
 		  imageURL: [imagePost2_imageSlide1, imagePost2_imageSlide2, imagePost2_imageSlide3, imagePost2_imageSlide4],
 		  likes: 30
 		},
+
+		{
+		  id: 3,
+		  imageURL: [imagePost1_imageSlide1, imagePost1_imageSlide2, imagePost1_imageSlide3, imagePost1_imageSlide4],
+		  comments: ["Great photo!", "Love it!"],
+		  likes: 25
+		},
+	
 
 	  ];
 	  

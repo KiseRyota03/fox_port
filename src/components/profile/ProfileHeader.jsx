@@ -74,8 +74,8 @@ const ProfileHeader = () => {
             <br />
             {"Former President of "}
             <Link
-              color="blue"
               href="/"
+
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -84,7 +84,6 @@ const ProfileHeader = () => {
             <br />
             {"Co-founder of "}
             <Link
-              color="blue"
               href="/"
               target="_blank"
               rel="noopener noreferrer"
@@ -135,20 +134,20 @@ const ProfileHeader = () => {
               <div>
                 <Carousel>
                   <Carousel.Item>
-                    <img
-                      style={{ height: "100vh" }}
-                      className="d-block w-100"
-                      src={resumeImage1}
-                      alt="First slide"
-                    />
+                  <Image
+  height={{ base: "70vh", md: "100vh" }}
+  className="d-block w-100"
+  src={resumeImage1}
+  alt="First slide"
+/>
                   </Carousel.Item>
                   <Carousel.Item>
-                    <img
-                      style={{ height: "100vh" }}
-                      className="d-block w-100"
-                      src={resumeImage2}
-                      alt="Second slide"
-                    />
+                  <Image
+  height={{ base: "70vh", md: "100vh" }}
+  className="d-block w-100"
+  src={resumeImage2}
+  alt="First slide"
+/>
                   </Carousel.Item>
              
 
