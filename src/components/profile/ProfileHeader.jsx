@@ -24,6 +24,8 @@ import Carousel from "react-bootstrap/Carousel";
 // import EditProfile from "./EditProfile";
 // import useFollowUser from "../../hooks/useFollowUser";
 import avatarImage from "../../assets/avatar.jpg";
+import resumeImage1 from "../../assets/posts/story/resume1.jpg"
+import resumeImage2 from "../../assets/posts/story/resume2.jpg"
 
 const ProfileHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,7 +39,7 @@ const ProfileHeader = () => {
           fontSize: 24, // Adjust the font size as needed
         }}
       >
-        hwinnie.log
+        Hwinnie.log
       </Text>
       <Divider
         style={{ backgroundColor: "#90B693", height: "2px", border: "none" }}
@@ -111,14 +113,14 @@ const ProfileHeader = () => {
         isOpen={isOpen}
         onClose={onClose}
         isCentered={true}
-        size={{ base: "3xl", md: "3xl" }}
+        size={{ base: "3xl", md: "md" }}
       >
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
           {/* thông tin phần body với background trắng */}
 
-          <ModalBody bg={"white"} p={10}>
+          <ModalBody bg={"white"} px={10} py = {5}> 
             {/* thông tin phần ảnh*/}
             <Flex
               borderRadius={4}
@@ -134,42 +136,28 @@ const ProfileHeader = () => {
                 <Carousel>
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                      style={{ height: "100vh" }}
                       className="d-block w-100"
-                      src={avatarImage}
+                      src={resumeImage1}
                       alt="First slide"
                     />
                   </Carousel.Item>
                   <Carousel.Item>
                     <img
-                      style={{ height: "90vh" }}
+                      style={{ height: "100vh" }}
                       className="d-block w-100"
-                      src={avatarImage}
+                      src={resumeImage2}
                       alt="Second slide"
                     />
                   </Carousel.Item>
-                  <Carousel.Item>
-                    <img
-                      style={{ height: "90vh" }}
-                      className="d-block w-100"
-                      src={avatarImage}
-                      alt="Third slide"
-                    />
-                  </Carousel.Item>
+             
 
-                  <Carousel.Item>
-                    <img
-                      style={{ height: "90vh" }}
-                      className="d-block w-100"
-                      src={avatarImage}
-                      alt="Fourth slide"
-                    />
-                  </Carousel.Item>
+          
                 </Carousel>
               </div>
             </Flex>
 
-            <Flex
+            {/* <Flex
               w={"full"}
               px={8}
               gap={{ base: 4, sm: 10 }}
@@ -182,7 +170,7 @@ const ProfileHeader = () => {
               flexDir={"column"}
               px={10}
               display={{ base: "none", md: "flex" }}
-            ></Flex>
+            ></Flex> */}
           </ModalBody>
         </ModalContent>
       </Modal>

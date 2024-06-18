@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { BsBookmark, BsGrid3X3 } from "react-icons/bs";
+import { BsBookmark, BsGrid3X3, BsCameraVideo  } from "react-icons/bs";
 import ProfilePosts from "./ProfilePosts";
 import ProfileReels from "./ProfileReels";
 
@@ -41,7 +41,7 @@ const ProfileTabs = () => {
           onClick={() => setActiveTab("reels")}
         >
           <Box fontSize={20}>
-            <BsBookmark />
+          <BsCameraVideo />
           </Box>
           <Text mt={4} fontSize={12} display={{ base: "none", sm: "block" }}>
             Reels

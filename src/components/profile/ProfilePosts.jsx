@@ -23,61 +23,34 @@ import imagePost3_imageSlide3 from "../../assets/posts/slide3/s3.jpg"
 import imagePost3_imageSlide4 from "../../assets/posts/slide3/s4.jpg"
 
 const ProfilePosts = () => {
-	// const { isLoading, posts } = useGetUserPosts();
-
-	// const noPostsFound = !isLoading && posts.length === 0;
 	const posts = [
 		{
-		  id: 1,
+			id: 1,
+			imageURL: [imagePost3_imageSlide1, imagePost3_imageSlide2, imagePost3_imageSlide3, imagePost3_imageSlide4],
+		  comments: ["Nice!", "Awesome!"],
+		  likes: 18
+		},
+		{
+		  id: 2,
 		  imageURL: [imagePost1_imageSlide1, imagePost1_imageSlide2, imagePost1_imageSlide3, imagePost1_imageSlide4],
 		  comments: ["Great photo!", "Love it!"],
 		  likes: 25
 		},
 		{
-			id: 2,
+			id: 3,
 		  imageURL: imagePost2,
 		  imageURL: [imagePost2_imageSlide1, imagePost2_imageSlide2, imagePost2_imageSlide3, imagePost2_imageSlide4],
 		  likes: 30
 		},
-		{
-			id: 3,
-			imageURL: [imagePost3_imageSlide1, imagePost3_imageSlide2, imagePost3_imageSlide3, imagePost3_imageSlide4],
-		  comments: ["Nice!", "Awesome!"],
-		  likes: 18
-		},
-		// {
-		// 	id: 4,
 
-		//   imageURL: imagePost4,
-		//   comments: ["Stunning!", "Incredible!"],
-		//   likes: 40
-		// },
-		// {
-		// 	id: 5,
-
-		//   imageURL: imagePost5,
-		//   comments: ["Lovely!", "Fantastic!"],
-		//   likes: 15
-		// },
-		// {
-		// 	id: 6,
-
-		//   imageURL: imagePost6,
-		//   comments: ["Superb!", "Brilliant!"],
-		//   likes: 35
-		// }
 	  ];
 	  
 	return (
 		<Grid
-			templateColumns={{
-				sm: "repeat(1, 1fr)",
-				md: "repeat(3, 1fr)",
-			}}
-			gap={1}
-			columnGap={1}
+		templateColumns="repeat(3, 1fr)"
+    gap={1}
+    columnGap={1}
 		>
-
 
 			{(
 				<>

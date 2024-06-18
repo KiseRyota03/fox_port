@@ -26,7 +26,6 @@ import avatarImage from "../../assets/avatar.jpg";
 const ProfilePost = ({ post }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-
   return (
     <>
       <GridItem
@@ -38,8 +37,6 @@ const ProfilePost = ({ post }) => {
         aspectRatio={1 / 1}
         onClick={onOpen}
       >
-     
-
         <Image
           src={post.imageURL[0]}
           alt="profile post"
@@ -53,14 +50,14 @@ const ProfilePost = ({ post }) => {
         isOpen={isOpen}
         onClose={onClose}
         isCentered={true}
-        size={{ base: "3xl", md: "6xl" }}
+        size={{ base: "1xl", md: "6xl" }}
       >
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
           {/* thông tin phần body với background trắng */}
 
-          <ModalBody bg={"white"} p= {10}>
+          <ModalBody bg={"white"} px={10} py={5}>
             {/* thông tin phần ảnh*/}
             <Flex
               borderRadius={4}
@@ -76,65 +73,57 @@ const ProfilePost = ({ post }) => {
                 <Carousel>
                   <Carousel.Item>
                     <img
-                     style={{
-                      height: {
-                        base: "50vh", 
-                        md: "90vh"     
-                      }
-                    }}
+                      style={{
+                        height: {
+                          base: "50vh",
+                          md: "90vh",
+                        },
+                      }}
                       className="d-block w-100"
                       src={post.imageURL[0]}
                       alt="First slide"
                     />
-          
                   </Carousel.Item>
                   <Carousel.Item>
                     <img
-                   style={{
-                    height: {
-                      base: "50vh", 
-                      md: "90vh"     
-                    }
-                  }}
+                      style={{
+                        height: {
+                          base: "50vh",
+                          md: "90vh",
+                        },
+                      }}
                       className="d-block w-100"
                       src={post.imageURL[1]}
                       alt="Second slide"
                     />
-
-          
                   </Carousel.Item>
                   <Carousel.Item>
                     <img
-                       style={{
+                      style={{
                         height: {
-                          base: "50vh", 
-                          md: "90vh"     
-                        }
+                          base: "50vh",
+                          md: "90vh",
+                        },
                       }}
                       className="d-block w-100"
                       src={post.imageURL[2]}
                       alt="Third slide"
                     />
-
-                
                   </Carousel.Item>
 
                   <Carousel.Item>
                     <img
-                     style={{
-                      height: {
-                        base: "50vh", 
-                        md: "90vh"     
-                      }
-                    }}
+                      style={{
+                        height: {
+                          base: "50vh",
+                          md: "90vh",
+                        },
+                      }}
                       className="d-block w-100"
                       src={post.imageURL[3]}
                       alt="Fourth slide"
                     />
-
-                
                   </Carousel.Item>
-
                 </Carousel>
               </div>
             </Flex>
@@ -145,6 +134,7 @@ const ProfilePost = ({ post }) => {
               gap={{ base: 4, sm: 10 }}
               textTransform={"uppercase"}
               fontWeight={"bold"}
+              display = {{base: "none", sm: "flex"}}
             >
               <Flex alignItems={"center"} p="3" gap={1} cursor={"pointer"}>
                 <Box fontSize={20}>
@@ -154,38 +144,38 @@ const ProfilePost = ({ post }) => {
 
               <Flex alignItems={"center"} p="3" gap={1} cursor={"pointer"}>
                 <Box fontSize={20}>
-                <FaRegComment />
+                  <FaRegComment />
                 </Box>
               </Flex>
             </Flex>
 
             <Flex
-                flex={1}
-                flexDir={"column"}
-                px={10}
-                display={{ base: "none", md: "flex" }}
-              >
-                <Flex alignItems={"center"} justifyContent={"space-between"}>
-                  <Flex alignItems={"center"} gap={4}>
-                    <Avatar
-                      src={avatarImage}
-                      size={"sm"}
-                      name="As a Programmer"
-                    />
-                    <Text fontWeight={"bold"} fontSize={12}>
-                      Đoàn Minh Huyền
-                    </Text>
-                  </Flex>
+              flex={1}
+              flexDir={"column"}
+              px={10}
+              display={{ base: "none", md: "flex" }}
+            >
+              <Flex alignItems={"center"} justifyContent={"space-between"}>
+                <Flex alignItems={"center"} gap={4}>
+                  <Avatar
+                    src={avatarImage}
+                    size={"sm"}
+                    name="As a Programmer"
+                  />
+                  <Text fontWeight={"bold"} fontSize={12}>
+                    Đoàn Minh Huyền
+                  </Text>
                 </Flex>
-                <VStack
-                  w="full"
-                  alignItems={"start"}
-                  maxH={"350px"}
-                  overflowY={"auto"}
-                >
-                  {post.caption && <PostCaption post={post} />}
-                </VStack>
               </Flex>
+              <VStack
+                w="full"
+                alignItems={"start"}
+                maxH={"350px"}
+                overflowY={"auto"}
+              >
+                {post.caption && <PostCaption post={post} />}
+              </VStack>
+            </Flex>
           </ModalBody>
         </ModalContent>
       </Modal>
