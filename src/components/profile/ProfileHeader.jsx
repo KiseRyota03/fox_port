@@ -24,8 +24,8 @@ import Carousel from "react-bootstrap/Carousel";
 // import EditProfile from "./EditProfile";
 // import useFollowUser from "../../hooks/useFollowUser";
 import avatarImage from "../../assets/avatar.jpg";
-import resumeImage1 from "../../assets/posts/story/resume1.jpg"
-import resumeImage2 from "../../assets/posts/story/resume2.jpg"
+import resumeImage1 from "../../assets/posts/story/resume1.jpg";
+import resumeImage2 from "../../assets/posts/story/resume2.jpg";
 
 const ProfileHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -59,9 +59,14 @@ const ProfileHeader = () => {
         </AvatarGroup>
 
         <VStack alignItems={"start"} mx={"auto"} flex={1}>
-            <Text width={"100%"} fontWeight="bold" textAlign={{ base: "center", md:"start" }}  fontSize={{ base: "sm", md: "lg" }}>
-              Đoàn Minh Huyền
-            </Text>
+          <Text
+            width={"100%"}
+            fontWeight="bold"
+            textAlign={{ base: "center", md: "start" }}
+            fontSize={{ base: "sm", md: "lg" }}
+          >
+            Đoàn Minh Huyền
+          </Text>
 
           <Text fontSize={"sm"}>
             {
@@ -73,21 +78,12 @@ const ProfileHeader = () => {
             }
             <br />
             {"Former President of "}
-            <Link
-              href="/"
-
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/" target="_blank" rel="noopener noreferrer">
               @_voc_cva
             </Link>
             <br />
             {"Co-founder of "}
-            <Link
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/" target="_blank" rel="noopener noreferrer">
               @tiem.nhomnhom
             </Link>
           </Text>
@@ -119,7 +115,7 @@ const ProfileHeader = () => {
           <ModalCloseButton />
           {/* thông tin phần body với background trắng */}
 
-          <ModalBody bg={"white"} px={10} py = {5}> 
+          <ModalBody bg={"white"} px={10} py={5}>
             {/* thông tin phần ảnh*/}
             <Flex
               borderRadius={4}
@@ -134,24 +130,21 @@ const ProfileHeader = () => {
               <div>
                 <Carousel>
                   <Carousel.Item>
-                  <Image
-  height={{ base: "70vh", md: "100vh" }}
-  className="d-block w-100"
-  src={resumeImage1}
-  alt="First slide"
-/>
+                    <Image
+                      height={{ base: "70vh", md: "100vh" }}
+                      className="d-block w-100"
+                      src={resumeImage1}
+                      alt="First slide"
+                    />
                   </Carousel.Item>
                   <Carousel.Item>
-                  <Image
-  height={{ base: "70vh", md: "100vh" }}
-  className="d-block w-100"
-  src={resumeImage2}
-  alt="First slide"
-/>
+                    <Image
+                      height={{ base: "70vh", md: "100vh" }}
+                      className="d-block w-100"
+                      src={resumeImage2}
+                      alt="First slide"
+                    />
                   </Carousel.Item>
-             
-
-          
                 </Carousel>
               </div>
             </Flex>

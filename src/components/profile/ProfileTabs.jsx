@@ -32,7 +32,7 @@ const ProfileTabs = () => {
           </Text>
         </Flex>
 
-        <Flex
+        {/* <Flex
           borderTop={activeTab === "reels" ? "2px solid #72ac77" : "none"}
           alignItems={"center"}
           p="3"
@@ -46,7 +46,7 @@ const ProfileTabs = () => {
           <Text mt={4} fontSize={12} display={{ base: "none", sm: "block" }}>
             Reels
           </Text>
-        </Flex>
+        </Flex> */}
       </Flex>
 
       <Box>
